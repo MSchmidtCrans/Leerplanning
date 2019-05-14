@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Baloo Bhai', cursive;
+    background-color: rgb(210, 220, 9);
 }
 
 .header {
@@ -19,12 +20,13 @@ h1 {
 
 .header button {
     position: absolute;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: rgb(217, 233, 47);
     color: black;
+    border-radius: 10px;
     margin: -40px auto 0px auto;
     transform: translate(-50%, -50%);
 }
@@ -40,13 +42,14 @@ h1 {
     justify-content: space-around;
     background-color: rgb(234, 243, 140);
     width: 100%;
-    height: 475px;
+    height: 40em;
     padding: 20px;
 }
 
 .columnFlex {
     background-color: rgb(227, 238, 89);
     width: 25%;
+    height: 1fr;
     border-radius: 50px;
     text-align: center;
 }
@@ -59,7 +62,7 @@ h1 {
 .modalContainerClass {
     display: none;
     position: absolute;
-    background-color:rgba(0,0,0, 0.5);
+    background-color:rgba(0,0,0, 0.7);
     left: 0px;
     top: 0px;
     width: 100%;
@@ -68,31 +71,65 @@ h1 {
 
 .modalClass {
     position: absolute;
-    width: 25%;
-    height: 10%;
+    width: 275px;
+    height: 6em;
     padding: 5px;
     line-height: 2;
     background-color: rgba(226, 238, 93, 1);
     left: 50%;
-    top: 30%;
+    top: 40%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 0 8px 14px 7px rgba(230, 218, 218, 0.4);
 }
 
-.modalClass button {
+#actCancelBtn {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 2px;
+    font-size: 12px;
+    padding: 4px;
     inset: 0px;
-    background: rgb(233, 47, 56);
+    background: rgba(233, 47, 56, 0.589);
     color: black;
+    border-radius: 10px;
+}
+
+#actSubmitBtn {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    padding: 4px;
+    inset: 0px;
+    background: rgba(47, 233, 47, 0.568);
+    color: black;
+    border-radius: 10px;
 }
 
 .modalClass button:hover {
     color: white;
     box-shadow: none;
+}
+
+.columnFlex span {
+    display: inline-block;
+    font-size: 18px;
+    width: 75%;
+    height: 100%;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.438);  
+    cursor: pointer; 
+}
+
+.urgencyLow {
+    background-color: rgba(219, 206, 27, 0.74);
+}
+
+.urgencyNormal {
+    background-color: rgba(143, 209, 36, 0.74); 
+}
+
+.urgencyHigh {
+    background-color: rgba(206, 35, 35, 0.74); 
 }
