@@ -1,0 +1,51 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.header {
+    background-color: rgb(210, 220, 9);
+    padding: 1px;
+    margin: auto;
+    text-align: center;
+    height: 10%;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+.header button {
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgb(217, 233, 47);
+    color: black;
+    margin: -40px auto 0px auto;
+    transform: translate(-50%, -50%);
+}
+
+button:hover {
+    background: rgb(107, 115, 12);
+    color: white;
+    box-shadow: none;
+}
+
+.mainContainer {
+    display: flex;    
+    justify-content: space-around;
+    background-color: rgb(234, 243, 140);
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+}
+
+.columnFlex {
+    background-color: rgb(227, 238, 89);
+    width: 25%;
+    border-radius: 50px;
+}
