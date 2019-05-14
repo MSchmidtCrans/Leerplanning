@@ -1,6 +1,8 @@
 # Leerplanning
 Een planbord voor je leerdoelen
 
+Demo: https://supersmitty2018.github.io/Leerplanning/
+
 Toegepaste technieken:
 - CSS
 - HTML
@@ -15,3 +17,5 @@ Toegepaste technieken:
 3. Create headers for columns -DONE-
 
 4. Create and try out test modal -DONE-
+
+5. Create activity cards with styling -DONE-
