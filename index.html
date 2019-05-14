@@ -31,7 +31,15 @@
     <!--Modal block-->
     <div id="modalContainer" class="modalContainerClass">
         <div id="modal" class="modalClass">
-            test
+            <form action="post">
+                <label for="input1">Activiteit: </label>
+                <input id="input1" type="text"><br>
+                <label for="input2">Urgentie: </label>
+                <input id="input2" type="radio" name="urgentie">Laag
+                <input type="radio" name="urgentie">Middel
+                <input type="radio" name="urgentie">Hoog
+            </form>
+            <button id="newActBtn" onclick="document.getElementById('modalContainer').style.display='none'">Annuleren</button>
         </div>
     </div>
 
