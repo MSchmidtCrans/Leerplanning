@@ -12,9 +12,10 @@
 <body>
     <div class="header">
         <p><h1>PLANBORD</h1></p>
-        <button id="newActBtn">NIEUWE ACTIVITEIT</button>
+        <button id="newActBtn" onclick="document.getElementById('modalContainer').style.display='block'">NIEUWE ACTIVITEIT</button>
     </div>
 
+    <!--Columns-->
     <div class="mainContainer">
         <div id="rowOne" class="columnFlex">
             <p><h2>TE DOEN</h2></p>
@@ -25,7 +26,23 @@
         <div id="rowThree" class="columnFlex">
             <p><h2>KLAAR</h2></p>
         </div>
-
     </div>
+
+    <!--Modal block-->
+    <div id="modalContainer" class="modalContainerClass">
+        <div id="modal" class="modalClass">
+            <form action="post">
+                <label for="input1">Activiteit: </label>
+                <input id="input1" type="text"><br>
+                <label for="input2">Urgentie: </label>
+                <input id="input2" type="radio" name="urgentie">Laag
+                <input type="radio" name="urgentie">Middel
+                <input type="radio" name="urgentie">Hoog
+            </form>
+            <button id="newActBtn" onclick="document.getElementById('modalContainer').style.display='none'">Annuleren</button>
+        </div>
+    </div>
+
+
 </body>
 </html>
