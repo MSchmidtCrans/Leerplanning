@@ -2,17 +2,20 @@ $(document).ready(function(){
 
 //Get values at buttonclick in activity modal
 $("#actSubmitBtn").click(function() {
+
     let actValue = $("#inputAct").val();
     let actUrgency = $("input[name='urgentie']:checked").val();
 
-    //Check if text field isn't empty before adding activity
+    //Check if text field isn't empty before adding activity 
     if (actValue != "") {
-        if (actUrgency == "laag") {
-    $("#rowOne").append("<p><span class='urgencyLow'>" + actValue + "</span></p>");
-        } else if(actUrgency == "middel") {
-            $("#rowOne").append("<p><span class='urgencyNormal'>" + actValue + "</span></p>");
+
+        //Assign urgency background color
+        if (actUrgency == "middel") {
+            $("#rowOne").append("<p><span id='test' class='urgencyNormal' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+        } else if(actUrgency == "hoog") {
+            $("#rowOne").append("<p><span class='urgencyHigh' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
         } else {
-            $("#rowOne").append("<p><span class='urgencyHigh'>" + actValue + "</span></p>");
+            $("#rowOne").append("<p><span class='urgencyLow' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
         }
 
     //Close Modal and reset modal fields 
@@ -20,11 +23,29 @@ $("#actSubmitBtn").click(function() {
     $("input[name='urgentie']:checked").removeProp("checked");
     $("#modalContainer").css("display", "none");
     } else {
-        alert("Graag text invullen bij het activiteit veld!!");
-    }
-    
-    
+        alert("Graag tekst invullen en/of een urgentie kiezen!!");
+    }     
 
-});
 
-}) //Final bracket
+}); //Click event end
+
+}) //Document ready end
+
+//Drag and drop functions
+
+//Set the column divs to allow drops from drags
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+//Set what data is to be dragged from the source div
+function drag(ev) {
+ev.dataTransfer.setData("text", ev.target.id);
+}
+
+//On drop drop the source div in the target div
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }

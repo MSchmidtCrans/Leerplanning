@@ -18,17 +18,17 @@
 
     <!--Columns-->
     <div class="mainContainer">
-        <div id="rowOne" class="columnFlex">
+        <div id="rowOne" class="columnFlex" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div class="columnTitle">
             <p><h2>TE DOEN</h2></p>
             </div>            
         </div>
-        <div id="rowTwo" class="columnFlex">
+        <div id="rowTwo" class="columnFlex" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div class="columnTitle">
             <p><h2>BEZIG</h2></p>
             </div>
         </div>
-        <div id="rowThree" class="columnFlex">
+        <div id="rowThree" class="columnFlex" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div class="columnTitle"> 
             <p><h2>KLAAR</h2></p>
             </div>
@@ -42,7 +42,7 @@
                 <label for="input1">Activiteit: </label>
                 <input id="inputAct" type="text" maxlength="22"><br>
                 <label for="input2">Urgentie: </label>
-                <input id="input2" type="radio" name="urgentie" value="laag">Laag
+                <input id="input2" type="radio" name="urgentie" value="laag" checked>Laag
                 <input type="radio" name="urgentie" value="middel">Middel
                 <input type="radio" name="urgentie" value="hoog">Hoog
             </form>
