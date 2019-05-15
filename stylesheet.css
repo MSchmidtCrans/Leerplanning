@@ -4,6 +4,8 @@ body {
     padding: 0px;
     font-family: 'Baloo Bhai', cursive;
     background-color: rgb(210, 220, 9);
+    width: 100%;
+    height: 100%;
 }
 
 .header {
@@ -37,21 +39,34 @@ h1 {
     box-shadow: none;
 }
 
+.plusImg {
+    position: relative;
+    left: 30px;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    transition: 0.2s;
+}
+
+.plusImg:hover {
+    width: 45px;
+    height: 45px;
+}
+
 .mainContainer {
     display: flex; 
     flex-wrap: wrap;
-     
     justify-content: space-around;
     background-color: rgb(234, 243, 140);
     width: 100%;
-    height: 40em;
+    height: 100%;
     padding: 20px;
 }
 
 .columnFlex {
     background-color: rgb(227, 238, 89);
-    width: 25%;
-    height: 1fr;
+    min-width: 400px;
+    height: 28em;
     border-radius: 50px;
     text-align: center;
 }
