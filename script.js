@@ -12,11 +12,11 @@ $("#actSubmitBtn").click(function() {
 
         //Assign urgency background color
         if (actUrgency == "middel") {
-            $("#rowOne").append("<p><span id='" + idClass + "' class='urgencyNormal' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+            $("#rowOne").append("<span id='" + idClass + "' class='urgencyNormal' draggable=true ondragstart=drag(event)>" + actValue + "</span>");
         } else if(actUrgency == "hoog") {
-            $("#rowOne").append("<p><span id='" + idClass + "' class='urgencyHigh' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+            $("#rowOne").append("<span id='" + idClass + "' class='urgencyHigh' draggable=true ondragstart=drag(event)>" + actValue + "</span>");
         } else {
-            $("#rowOne").append("<p><span id='" + idClass + "' class='urgencyLow' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+            $("#rowOne").append("<span id='" + idClass + "' class='urgencyLow' draggable=true ondragstart=drag(event)>" + actValue + "</span>");
         }
 
     //Close Modal and reset modal fields 
