@@ -5,17 +5,18 @@ $("#actSubmitBtn").click(function() {
 
     let actValue = $("#inputAct").val();
     let actUrgency = $("input[name='urgentie']:checked").val();
+    let idClass = actValue + actUrgency;
 
     //Check if text field isn't empty before adding activity 
     if (actValue != "") {
 
         //Assign urgency background color
         if (actUrgency == "middel") {
-            $("#rowOne").append("<p><span id='test' class='urgencyNormal' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+            $("#rowOne").append("<p><span id='" + idClass + "' class='urgencyNormal' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
         } else if(actUrgency == "hoog") {
-            $("#rowOne").append("<p><span class='urgencyHigh' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+            $("#rowOne").append("<p><span id='" + idClass + "' class='urgencyHigh' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
         } else {
-            $("#rowOne").append("<p><span class='urgencyLow' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
+            $("#rowOne").append("<p><span id='" + idClass + "' class='urgencyLow' draggable=true ondragstart=drag(event)>" + actValue + "</span></p>");
         }
 
     //Close Modal and reset modal fields 
