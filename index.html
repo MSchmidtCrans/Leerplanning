@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <title>Planbord leerdoelen</title>
 </head>
 <body>
@@ -20,24 +21,17 @@
         <div id="rowOne" class="columnFlex">
             <div class="columnTitle">
             <p><h2>TE DOEN</h2></p>
-            </div>
-            <p><span id="cardOne" class="activityCard urgencyLow">activityCard urgencyLow</span></p>
-            <p><span id="cardTwo" class="activityCard urgencyNormal">activityCard urgencyNormal</span></p>
-            <p><span id="cardThree" class="activityCard urgencyHigh">activityCard urgencyHigh</span></p>
+            </div>            
         </div>
         <div id="rowTwo" class="columnFlex">
             <div class="columnTitle">
             <p><h2>BEZIG</h2></p>
             </div>
-            <p><span id="cardTwo" class="activityCard urgencyNormal">activityCard urgencyNormal</span></p>
-            <p><span id="cardThree" class="activityCard urgencyHigh">activityCard urgencyHigh</span></p>
         </div>
         <div id="rowThree" class="columnFlex">
             <div class="columnTitle"> 
             <p><h2>KLAAR</h2></p>
             </div>
-            <p><span id="cardOne" class="activityCard urgencyLow">activityCard urgencyLow</span></p>
-            <p><span id="cardTwo" class="activityCard urgencyNormal">activityCard urgencyNormal</span></p>
         </div>
     </div>
 
@@ -46,11 +40,11 @@
         <div id="modal" class="modalClass">
             <form action="post">
                 <label for="input1">Activiteit: </label>
-                <input id="input1" type="text" maxlength="22"><br>
+                <input id="inputAct" type="text" maxlength="22"><br>
                 <label for="input2">Urgentie: </label>
-                <input id="input2" type="radio" name="urgentie">Laag
-                <input type="radio" name="urgentie">Middel
-                <input type="radio" name="urgentie">Hoog
+                <input id="input2" type="radio" name="urgentie" value="laag">Laag
+                <input type="radio" name="urgentie" value="middel">Middel
+                <input type="radio" name="urgentie" value="hoog">Hoog
             </form>
             <button id="actSubmitBtn">Opslaan</button>
             <button id="actCancelBtn" onclick="document.getElementById('modalContainer').style.display='none'">Annuleren</button>
