@@ -13,14 +13,13 @@
 <body>
     <div class="header">
         <p><h1>LEERDOELEN PLANBORD</h1></p>
-        <button id="newActBtn" onclick="document.getElementById('modalContainer').style.display='block'">NIEUWE ACTIVITEIT</button>
     </div>
 
     <!--Columns-->
     <div class="mainContainer">
         <div id="rowOne" class="columnFlex" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div class="columnTitle">
-            <p><h2>TE DOEN</h2></p>
+            <p><h2>TE DOEN<img src="plus.png" class="plusImg" alt="plus sign" onclick="document.getElementById('modalContainer').style.display='block'"></h2></p>
             </div>            
         </div>
         <div id="rowTwo" class="columnFlex" ondrop="drop(event)" ondragover="allowDrop(event)">
