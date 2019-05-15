@@ -116,6 +116,7 @@ h1 {
 
 .columnFlex span {
     display: inline-block;
+    margin-top: 10px;
     font-size: 18px;
     width: 75%;
     height: 2em;
